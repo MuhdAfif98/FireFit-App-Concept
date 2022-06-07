@@ -216,9 +216,10 @@ class _UserProgressState extends State<UserProgress> {
                                       children: [
                                         Container(
                                           decoration: BoxDecoration(
-                                              gradient: moodIcons[index].selected
-                                                  ? gradientOrange
-                                                  : gradientGrey,
+                                              gradient:
+                                                  moodIcons[index].selected
+                                                      ? gradientOrange
+                                                      : gradientGrey,
                                               borderRadius:
                                                   BorderRadius.circular(10)),
                                           width: 100,
@@ -230,8 +231,15 @@ class _UserProgressState extends State<UserProgress> {
                                                 : defaultIcon,
                                           ),
                                         ),
-                                        const SizedBox(height: 5,),
-                                        Text(moodIcons[index].title,style: moodIcons[index].selected ? mainStyle(12, Colors.black) : mainStyle(12, Colors.grey),)
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Text(
+                                          moodIcons[index].title,
+                                          style: moodIcons[index].selected
+                                              ? mainStyle(12, Colors.black)
+                                              : mainStyle(12, Colors.grey),
+                                        )
                                       ],
                                     ),
                                   ),
@@ -240,10 +248,10 @@ class _UserProgressState extends State<UserProgress> {
                             ),
                           ),
                         ),
-                
+
                         //bar graph sini
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal:25.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 25.0),
                           child: SizedBox(
                             width: double.infinity,
                             height: 150,
@@ -251,9 +259,14 @@ class _UserProgressState extends State<UserProgress> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
                               color: const Color(0xff2c4260),
-                              child: const Padding(
-                                padding: EdgeInsets.all(10.0),
-                                child: _BarChart(),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    gradient: gradientMainHorizontal,
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: _BarChart(),
+                                ),
                               ),
                             ),
                           ),
@@ -269,7 +282,7 @@ class _UserProgressState extends State<UserProgress> {
         bottomNavigationBar: Container(
           color: Colors.white,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             child: FloatingActionButton(
               elevation: 0,
               disabledElevation: 0,
@@ -327,7 +340,7 @@ class _BarChart extends StatelessWidget {
 
   Widget getTitles(double value, TitleMeta meta) {
     const style = TextStyle(
-      color: Color(0xff7589a2),
+      color: Colors.white,
       fontWeight: FontWeight.bold,
       fontSize: 14,
     );
@@ -360,7 +373,7 @@ class _BarChart extends StatelessWidget {
     }
     return SideTitleWidget(
       axisSide: meta.axisSide,
-      space: 4.0,
+      space: 8.0,
       child: Text(text, style: style),
     );
   }
@@ -389,86 +402,69 @@ class _BarChart extends StatelessWidget {
         show: false,
       );
 
-  final _barsGradient = const LinearGradient(
-    colors: [
-      Colors.lightBlueAccent,
-      Colors.greenAccent,
-    ],
-    begin: Alignment.bottomCenter,
-    end: Alignment.topCenter,
-  );
-
   List<BarChartGroupData> get barGroups => [
         BarChartGroupData(
           x: 0,
           barRods: [
             BarChartRodData(
               toY: 8,
-              gradient: _barsGradient,
+              gradient: gradientOrangeHorizontal,
             )
           ],
-          showingTooltipIndicators: [0],
         ),
         BarChartGroupData(
           x: 1,
           barRods: [
             BarChartRodData(
               toY: 10,
-              gradient: _barsGradient,
+              gradient: gradientOrangeHorizontal,
             )
           ],
-          showingTooltipIndicators: [0],
         ),
         BarChartGroupData(
           x: 2,
           barRods: [
             BarChartRodData(
               toY: 14,
-              gradient: _barsGradient,
+              gradient: gradientOrangeHorizontal,
             )
           ],
-          showingTooltipIndicators: [0],
         ),
         BarChartGroupData(
           x: 3,
           barRods: [
             BarChartRodData(
               toY: 15,
-              gradient: _barsGradient,
+              gradient: gradientOrangeHorizontal,
             )
           ],
-          showingTooltipIndicators: [0],
         ),
         BarChartGroupData(
           x: 4,
           barRods: [
             BarChartRodData(
               toY: 13,
-              gradient: _barsGradient,
+              gradient: gradientOrangeHorizontal,
             )
           ],
-          showingTooltipIndicators: [0],
         ),
         BarChartGroupData(
           x: 5,
           barRods: [
             BarChartRodData(
               toY: 10,
-              gradient: _barsGradient,
+              gradient: gradientOrangeHorizontal,
             )
           ],
-          showingTooltipIndicators: [0],
         ),
-
         BarChartGroupData(
           x: 6,
           barRods: [
             BarChartRodData(
               toY: 10,
-              gradient: _barsGradient,
+              gradient: gradientOrangeHorizontal,
             )
           ],
-          showingTooltipIndicators: [0],
         ),
       ];
 }

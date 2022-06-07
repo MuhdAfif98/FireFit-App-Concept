@@ -17,6 +17,11 @@ const LinearGradient gradientOrange = LinearGradient(
     end: Alignment.centerRight,
     colors: [orange2, orange]);
 
+    const LinearGradient gradientOrangeHorizontal = LinearGradient(
+    begin: Alignment.bottomCenter,
+    end: Alignment.topCenter,
+    colors: [orange2, orange]);
+
 const LinearGradient gradientMain = LinearGradient(
     begin: Alignment.bottomCenter,
     end: Alignment.topCenter,
