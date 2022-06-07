@@ -174,7 +174,7 @@ class _UserProgressState extends State<UserProgress> {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 10.0, horizontal: 50),
                             child: Text(
-                              "Details",
+                              "Workout types",
                               style: gFontStyle(14, Colors.white),
                             ),
                           ),
