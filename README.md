@@ -1,4 +1,4 @@
-# firefit_app
+# FireFit Application
 
 A fitnes application UI Concept developed using Flutter
 
