@@ -1,16 +1,9 @@
-# firefit_app
+# FireFit Application
 
-A new Flutter project.
+A fitnes application UI Concept developed using Flutter
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This UI design taken from Freepik and developed using Dart language
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![ezgif-5-462eb4c5ae](https://user-images.githubusercontent.com/44563274/172271846-811156ed-f173-4dbc-9b7f-b1b337695be8.jpg)
